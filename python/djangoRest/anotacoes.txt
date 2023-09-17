@@ -1,0 +1,43 @@
+pip install djangorestframework
+pip install markdown
+pip install django-filter
+
+ django-admin startproject api
+cd api
+python manage.py startapp core
+
+api>settings.py - INSTALLED_APPS = ['core', 'rest_framework]
+
+em api:
+python manage.py migrate	criando banco de dados
+
+ python manage.py createsuperuser
+admin
+sem email
+senha admin
+testar
+ python manage.py runserver
+127.0.0.1:8000/admin
+
+em urls.py:
+importar o include
+e add em urlpatterns:
+path('api-auth', include('rest_frameworks.urls'))
+
+criar um model
+core>models.py:
+
+class NomeClasse(models.Model):
+	nome = models.CharField(max_length=50)
+	idade = moldes.IntegerField()
+
+def __str__(self):
+	return self.nome
+
+agora tem que registar no \core\admin.py
+
+criando \core\serializers.py
+
+em views.py
+
+em urls.py do projeto (no caso 'api')
