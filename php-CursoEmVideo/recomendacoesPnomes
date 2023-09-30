@@ -1,0 +1,7 @@
+tente dar nomes claros e de fácil identificação
+evite nomes muito curtos ou muito longos
+defina um padrão e siga em todo o projeto
+para variáveis, dê preferência a letras minusculas 
+para constantes, dê preferência a letras maiusculas
+use camelCase para métodos e atributos
+use SNAKE_CASE para nomear constantes

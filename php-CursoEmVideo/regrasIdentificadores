@@ -1,0 +1,7 @@
+variáveis sempre começam com o $
+depois pode ser letra ou _
+aceita letras (a A) e numeros (0-9) e o _
+aceita caracteres da tabela ASCII a partir de 128
+aceita caracteres acentuados com á,ç,ô
+case sensitive
+nomes especiais como $this não podem ser usados
