@@ -1,0 +1,9 @@
+aspas simples ' a \' x \' b';
+
+aspas duplas "a \" x \" b";
+
+\n => nova linha
+\t => tabulação horizontal
+\\ => barra invertida
+\$ => sinal de cifrão 
+\u{} => Codepoint Unicode

@@ -1,0 +1,33 @@
+QUATRO FORMATOS
+double quoted => "Curso" => existe a interpretação do conteúdo
+=> "PHP\u{1F418}" > PHP e um emoji
+=> "Olá $nome" : imprime o valor da variável
+
+single quoted => 'PHP' => não há interpretação de conteúdo
+=> 'Olá $nome' : imprime Olá $nome
+
+
+Heredoc 
+=>
+$curso = "PHP";
+$ano = date('Y');
+echo <<< FRASE
+    Estou estudando
+        $curso em $ano
+FRASE;
+// pode colocar qualquer nome no lugar de FRASE
+// não pode colar o nome no sinal MENOR QUE
+
+Nowdoc
+=> Mesma lógica de aspas duplas e simples, aqui não vai interpretar o código
+$curso = "PHP";
+$ano = date('Y');
+echo <<< 'FRASE'
+    Estou estudando
+        $curso em $ano
+FRASE;
+
+para imprimir uma constante
+cons X = "10";
+echo "Numero da constante é" . X;
+usar o operador de concatenação .(ponto)
