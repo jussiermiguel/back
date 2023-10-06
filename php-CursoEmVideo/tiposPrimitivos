@@ -1,0 +1,15 @@
+string
+int ou integer => valor numerico inteiro
+float ou double, real (antigo) => numeros com a parte decimal
+bool ou boolean => true or false
+
+
+TIPOS COMPOSTOS
+array
+object
+
+TIPOS ESPECIAIS
+null
+resource
+callabe
+mixed
