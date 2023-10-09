@@ -1,0 +1,14 @@
+
+    $r = abs(-2000);// retira o sinal
+    $base_convert = base_convert(254, 10, 16);
+    print("A resposta é $r");
+    print("A resposta é $base_convert")
+
+arredondamentos ceil(), floo(), round()
+calculo de área do triângulo hypot()
+o resultado da divisão real intdiv()
+min() max()
+pi() ou M_PI
+pow() potência
+sin() cos() tan()
+sqrt() raíz quadrada
