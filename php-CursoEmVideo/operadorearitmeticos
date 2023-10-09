@@ -1,0 +1,11 @@
+2 + 2 = 4
+"2" + "2" = "22" ou "4" ou 4 ou ERRO
+R    4   do tipo inteiro
+     ao usar o + o PHP entende que é uma soma e vai somar mesmo sendo string
+
++ Adição
+- Subtração
+* Multiplicação
+/ Divisão
+% Módulo => resto da Divisão
+** Potência
