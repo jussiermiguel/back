@@ -25,12 +25,43 @@ function retornaStatusIMC(imc){
     return status;
 }
 
-let peso = 90;
+let peso = 0;
 let altura = 1.72;
 
-let resultado = cacularIMC(peso, altura);
-let statusIMC = retornaStatusIMC(resultado);
+function validaPeso(peso){
+    let pesoValido = false;
+    
+    if (peso > 0){
+        pesoValido = true;
+    }
 
-console.log(`Seu imc é ${resultado} e você está ${statusIMC}`);
+    return pesoValido;
+}
+
+function validaAltura(altura){
+    let alturaValida = false;
+
+    if (altura > 0){
+        alturaValida = true;
+    }
+
+    return alturaValida;
+}
+
+
+let verificaPesoValido = validaPeso(peso);
+let verificaAlturaValida = validaAltura(altura);
+
+if (verificaPesoValido && verificaAlturaValida){
+
+    
+    let resultado = cacularIMC(peso, altura);
+    let statusIMC = retornaStatusIMC(resultado);
+    
+    console.log(`Seu imc é ${resultado} e você está ${statusIMC}`);
+}
+else{
+    console.log(`Peso e altura devem ser maiores que zero`);
+}
 
 
