@@ -1,0 +1,18 @@
+$_GET => array associativo e todas as variáveis são passadas como parâmetro na url
+
+$_POST => "Segurança"
+
+$_REQUEST => uma mistura
+
+
+$_COOKIE => pequenas variáveis que são guardadas dentro do navegador
+
+$_FILES => ao fazer upload e pega os dados
+
+$_SESSION => variáveis que não são perdidas entre a navegação de páginas
+
+$_ENV => variáveis de ambientes
+
+$_SERVER => 
+
+$GLOBALS => super mais completa. Mostra os dados de todas as outras
