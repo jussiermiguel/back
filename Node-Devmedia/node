@@ -1,0 +1,11 @@
+# é um ambiente que executa códigos javascript no lado da aplicação
+# utilizamos javascript para construir o back-end da aplicação
+
+## programador back end > não se preocupa com a aparência
+## programador full-stack > domina o node.js e também alguma tecnologia front-end como Angular, React Native ou Vue.js
+
+# Node e NPM
+## NPM é um gerenciador de dependências. É instalado automaticamente durante a instalação do Node
+## O que são dependências? > bibliotecas externas necessárias para o funcionamento da aplicação
+### Ao instalar o Node, ele vem com recursos básicos. E futuramente talvez seja preciso instalar novos recursos, esses recursos são as dependências
+## Gerenciador de dependências? > automatiza a instalação de novas dependências na aplicação
