@@ -1,0 +1,101 @@
+# As regras do padrão REST são divididas em 4 categorias:
+## Endpoints
+## Verbos HTTP
+## JSON
+## Código de status
+
+
+# Endpoints
+## API em forma de URL
+## fornecidos pelo back-end
+## Sintaxe
+> https://dominio.com.br/funcao/parametro
+### dominio = local onde a API está hospedada.
+### funcao = função que será executada no back-end
+### parametro = valor a ser usado na função
+## Enviar valores e obter resultado
+Ex > converter milhas, converter temperatura
+## Manipular dados
+Ex > cadastrar cliente, consultar preço de produto
+### para passar o parâmetro no endpoint é necessário colocar o ponto de interrogação (?)
+#### ?nome_parametro1=valor1&nome_parametro2=valor2
+https://api.com.br/converte-milhas/?qtdMilhas=1&converterPara=metros
+### manipular dados
+#### cadastrar
+#### alterar
+#### consultar
+#### excluir
+https://dominio.com.br/dados/parametro
+#### há casos em que o endpoint tem mais de um parâmetro
+#### observe que não indicamos no endpoint qual a ação será realizada (cadastrar, consultar, alterar, excluir). Isso é feito com o uso de um verbo HTTP
+### solicitando dados do cliente com id=2 
+https://api.com.br/cliente/2
+## lidam com função
+
+# Verbos HTTP
+## verbos HTTP ; Conteúdo JSON
+### GET > Obter dados
+#### sem JSON de envio
+#### JSON é utilizado apenas para retornar a coleção de produtos para o front-end
+### POST > Inserir dados
+### PUT/PATCH > Atualizar dados
+#### PUT > atualizar todos os dados
+#### PATCH > atualizar apenas um dado
+### DELETE > Excluir dados
+#### envia o id para a API
+
+### verbos e finalidade
+#### GET > https://produtos > todos os produtos
+#### GET > https://produtos/2 > obter um produto
+#### POST > https://produtos > cadastrar um produto
+#### PUT > https://produtos/2 > atualizar todos os dados
+#### PATCH > https://produtos/2 > atualizar alguns dados
+#### DELETE > https://produtos/2 > excluir um produto
+
+# JSON
+## todos os dados que o front e API trocam entre si estão no formato JSON dentro do padrão REST
+## sintaxe
+### {    "chave" : valor, } 
+#### {
+####    "nome" : "Evandro Santos",
+####    "idade" : 25,
+####    "ativo" : trie
+#### }
+## utilizando em APIs (cadastro)
+### Dados enviados do front-end para a API
+#### {"nome" : "S20", "preco" : 2500.00}
+### Dados enviados da API para o front-end
+#### {
+####    "Mensagem" : "Produto cadastrado com sucesso",
+####    "id" : 2
+#### }
+## documentação
+### GET > o JSON é utilizado apenas para retornar a coleção de produtos para o front
+### > https://api.com.br/produtos ou produtos/2
+### POST > JSON utilizado tanto para enviar dados, quanto para retornar uma mensagem e id para o front
+### > api/produtos
+### PUT > JSON utilizado tanto para enviar dados, como retornar mensagem para o front
+### > api/produtos/2
+### PATCH > JSON para enviar dados e retornar uma mensagem
+### > produtos/2
+### DELETE > JSON apenas para retornar uma mensagem para o front
+### > produtos/2
+
+# Código de status
+## servem para indicar se a requisição a uma API foi bem sucedida ou não
+## categorias
+### respostas de informação > 100 a 199 > informa que a solicitação está em andamento
+### respostas de sucesso > 200 a 299 > significa que a operação foi bem sucedida
+### redirecionamento 300 a 399 > significa que a solicitação foi recebida e que para ser processada com êxito, é necessária mais alguma ação do lado do front
+### erros do cliente 400 a 499 > significa que há um erro vindo do front. Recebe a solicitação, mas não pode executá-la
+### erros do servidor 500 a 599 > Significa que há um erro no back. A solicitação não pode ser executada
+## exemplos
+### 200 > solicitação feita com sucesso
+### 201 > recurso criado com sucesso
+### 403 > acesso proibido
+### 404 > não encontrado
+### 500 > erro interno do servidor
+
+# Postman
+## testando uma API
+## enviar requisições e receber um retorno
