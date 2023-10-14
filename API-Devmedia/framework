@@ -1,0 +1,4 @@
+# Express.js
+## ao transferir o projeto do ambiente local para uma hospedagem, github, ignoramos a pasta node_modules
+
+## package.json é onde ficam registradas todas as depêndecias do projeto
