@@ -7,23 +7,37 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Infome um número</h1>
-    </header>
+    <?php 
+        $numero = $_GET['numero'] ?? 0;
+    ?>
+ 
     <main>
+        <h1>Informe um número</h1>
         <form action="<?=$_SERVER['PHP_SELF']?>" method="get">
-            <label for="nome">Numero</label>
-            
+            <label for="numero">Numero</label>
+            <input type="number" name="numero" id="numero" value="<?=$numero?>">
+            <input type="submit" value="Calcular">
         </form>
+    </main>
+    <section>
+        <h2>Resultado</h2>
+        <?php 
+            $raiz_quadrada = $numero**(1/2);
+            $raiz_cubica = $numero**(1/3);
+            
+            echo "<p>Analisando o número $numero, temos:</p>";
+    
+            echo "<ul><li>Raíz Quadrada: $raiz_quadrada</li>";
+            echo "<li>Raíz Cúbica: $raiz_cubica</li></ul>";
+
+        ?>
         <!-- 
             analisando o número x, temos:
-
+            
             * a sua raiz quadrada é y
             * a sua raiz cúbica é z
-         -->
-        <button onclick="javascript:window.location.href='numsorteado.php'">Sortear outro</button>
-
-    </main>
+        -->
+    </section>
     
 </body>
 </html>
