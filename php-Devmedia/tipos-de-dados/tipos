@@ -1,0 +1,16 @@
+# O PHP utiliza checagem de tipos dinâmica. Em outras palavras, uma variável pode conter valores de diferentes tipos em diferentes momentos da execução do script.
+
+# Os tipos de dados suportados por esta linguagem são divididos em dois grupos:
+
+## Escalares
+### Inteiro
+### Ponto flutuante
+### String
+### Booleanos
+## Compostos
+### Array
+### Objeto
+### Iterable
+### NULL
+### resource
+### callable
